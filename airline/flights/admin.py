@@ -7,7 +7,11 @@ from .models import Airport, Flight, Passenger
 class FlightAdmin(admin.ModelAdmin):
     list_display = ("__str__", "duration")
 
+
+
 class PassengerAdmin(admin.ModelAdmin):
+
+# special way of manipulating many to many relationships inside
     filter_horizontal = ("flights",)
     
 
